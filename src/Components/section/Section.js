@@ -46,9 +46,9 @@ class Section extends Component {
             bad={this.state.bad}
             total={total}
             positivePercentage={this.countPositiveFeedbackPercentage}
-          ></Statistics>
+          />
         ) : (
-          <Notification message={"No feedback given"} />
+          <Notification message="No feedback given" />
         )}
       </div>
     );

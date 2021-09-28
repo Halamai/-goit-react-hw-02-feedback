@@ -1,0 +1,12 @@
+.btn {
+  background-color: blueviolet;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  margin: 5px;
+}
+.btn:hover,
+.btn:focus {
+  background-color: rgb(77, 72, 82);
+}
