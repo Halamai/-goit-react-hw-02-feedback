@@ -1,12 +1,10 @@
 import React from "react";
-// import FeedbackOptions from "./feedbackOptions/FeedbackOptions";
-import Statistic from "./statistic/Statistic";
+import Section from "./section/Section";
 
 const App = () => {
   return (
     <>
-      {/* <FeedbackOptions /> */}
-      <Statistic />
+      <Section title="Please leave feedback" />
     </>
   );
 };
