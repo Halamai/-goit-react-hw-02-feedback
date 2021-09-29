@@ -26,12 +26,14 @@ class Section extends Component {
   render() {
     const { title } = this.props;
     const total = this.countTotalFeedback();
+    const feedback = this.countPositiveFeedbackPercentage();
     return (
       <div>
         <h1 className="titleFitback">{title}</h1>
         {Object.keys(this.state).map((item) => {
           return (
             <FeedbackOptions
+              key={item}
               onLeaveFeedback={this.changeState}
               options={item}
             />
@@ -45,7 +47,7 @@ class Section extends Component {
             neutral={this.state.neutral}
             bad={this.state.bad}
             total={total}
-            positivePercentage={this.countPositiveFeedbackPercentage}
+            positivePercentage={feedback}
           />
         ) : (
           <Notification message="No feedback given" />
