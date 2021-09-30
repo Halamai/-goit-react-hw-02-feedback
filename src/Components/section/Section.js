@@ -30,17 +30,13 @@ class Section extends Component {
     return (
       <div>
         <h1 className="titleFitback">{title}</h1>
-        {Object.keys(this.state).map((item) => {
-          return (
-            <FeedbackOptions
-              key={item}
-              onLeaveFeedback={this.changeState}
-              options={item}
-            />
-          );
-        })}
-        <hr />
 
+        <FeedbackOptions
+          onLeaveFeedback={this.changeState}
+          options={this.state}
+        />
+
+        <hr />
         {total ? (
           <Statistics
             good={this.state.good}

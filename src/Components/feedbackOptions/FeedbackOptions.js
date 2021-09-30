@@ -2,16 +2,17 @@ import React from "react";
 import "./FeedbackOptions.css";
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-  return (
+  return Object.keys(options).map((item) => (
     <button
+      key={item}
       className="btn"
       type="button"
-      name={options}
+      name={item}
       onClick={onLeaveFeedback}
     >
-      {options}
+      {item}
     </button>
-  );
+  ));
 };
 
 export default FeedbackOptions;
